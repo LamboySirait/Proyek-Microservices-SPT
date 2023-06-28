@@ -1,0 +1,125 @@
+// Create a user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Admin",
+    "email": "admin@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "admin"
+}
+
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Kepin",
+    "email": "kepin@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "user"
+}
+
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "alex",
+    "email": "alex@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "user"
+}
+
+// Get all users
+###
+GET http://localhost:5000/users
+
+// Get single users
+###
+GET http://localhost:5000/users/7cb6de93-4357-438e-888f-d482c87a137b
+
+// Update User
+###
+PATCH http://localhost:5000/users/7cb6de93-4357-438e-888f-d482c87a137b
+Content-Type: application/json
+
+{
+    "name": "Kipinnn",
+    "email": "kipin@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+// Delete User
+###
+DELETE  http://localhost:5000/users/a05e92c8-55cb-42bf-95cf-5ef30faa5fe8
+
+// Login User
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "123456"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "kipin@gmail.com",
+    "password": "123456"
+}
+
+// User yang sedang Login
+###
+GET http://localhost:5000/me
+
+// Logout
+###
+DELETE http://localhost:5000/logout
+
+
+// Get all lamarans
+###
+GET http://localhost:5000/lamarans
+
+// Get one lamaran
+###
+GET http://localhost:5000/lamarans/b5f722b9-61af-4522-8432-9d37df206815
+
+// Add Lamaran
+###
+POST http://localhost:5000/lamarans
+Content-Type: application/json
+
+{
+    "name": "Pelamar X",
+    "posisi": "DosenX",
+    "deskripsi": "X",
+    "pengalaman": 3
+}
+
+// Update Lamaran
+###
+PATCH  http://localhost:5000/lamarans/1115f585-7984-487b-adfe-4d93f3cfa9b9
+Content-Type: application/json
+
+{
+    "name": "Pelamar tiga",
+    "email": "pelamartiga@gmail.com",
+    "posisi": "canteen",
+    "deskripsi": "masak",
+    "pengalaman": 3
+}
+
+// Delete Lamaran
+###
+DELETE  http://localhost:5000/lamarans/b5f722b9-61af-4522-8432-9d37df206815

@@ -1,0 +1,6 @@
+admin : dashboard, jobs(crud?)(nama, img link), lamaran, users, logout
+
+yang menambahkan user hanya admin, admin hanya 1, admin bisa hapus user
+admin bisa menghapus lamaran user, jika lamaran dihapus = ditolak
+
+user : dashboard, jobs, lamaran(crud), logout
